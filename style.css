@@ -84,6 +84,10 @@ nav a:focus {
     outline-offset: 2px;
 }
 
+nav a:focus {
+    outline: none;
+}
+
 /* --- footer --- */
 
 .site-footer {
