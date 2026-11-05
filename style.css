@@ -16,6 +16,7 @@ html {
     --background: white;
     --color: black;
     --font: "Inter", sans-serif;
+    --spacing: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +30,10 @@ body {
     font-family: var(--font);
     background-color: var(--background);
     color: var(--color);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- header --- */
@@ -39,7 +44,7 @@ header {
     font-weight: 600;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: var(--spacing);
     align-items: center;
 }
 
@@ -51,7 +56,7 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: var(--spacing);
 }
 
 nav a {
@@ -59,6 +64,7 @@ nav a {
     text-decoration: none;
     font-size: 1.1rem;
     padding: 0.25rem 0;
+    transition: color 0.3s ease;
 }
 
 nav a.active {
@@ -73,6 +79,66 @@ nav a:hover {
 }
 
 /* --- footer --- */
+
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: var(--spacing) var(--spacing) 1rem var(--spacing);
+    font-size: 0.95rem;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing);
+    border-bottom: 1px solid #333333;
+    gap: var(--spacing);
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-section a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.footer-section a:focus {
+    outline: 4px dashed var(--primary);
+    outline-offset: 2px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    color: #888888;
+    font-size: 0.85rem;
+}
 
 /* --- responsive design --- */
 
