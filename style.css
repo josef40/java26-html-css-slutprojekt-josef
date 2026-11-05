@@ -38,7 +38,7 @@ body {
 
 /* --- header --- */
 
-header {
+.site-header {
     background-color: var(--primary);
     font-size: 1.6rem;
     font-weight: 600;
@@ -74,8 +74,14 @@ nav a.active {
     text-underline-offset: 6px;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: var(--accent);
+}
+
+nav a:focus {
+    outline: 4px dashed var(--accent);
+    outline-offset: 2px;
 }
 
 /* --- footer --- */
@@ -143,7 +149,7 @@ nav a:hover {
 /* --- responsive design --- */
 
 @media (max-width: 600px) {
-    header {
+    .site-header {
         flex-direction: column;
         gap: 1.5rem;
     }
