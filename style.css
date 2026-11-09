@@ -324,13 +324,6 @@ nav a:focus-visible {
     max-width: 600px;
 }
 
-/* gallery header */
-.gallery h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: var(--spacing);
-}
-
 /* "Se mer" button holder */
 .see-more-button-holder {
     text-align: center;
