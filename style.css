@@ -196,6 +196,188 @@ nav a:focus-visible {
 }
 
 /* ==========================================================================
+   cards
+   ========================================================================== */
+
+.cards {
+    display: grid;
+
+    /* fills space on x axis so cards class is centered */
+    margin: 0 auto;
+
+    gap: var(--spacing);
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* card image */
+.card img {
+    /* makes image width take 100% of space in parent */
+    width: 100%;
+    /* makes image 1:1 ratio (a square) */
+    aspect-ratio: 1 / 1;
+    /* prevents image to stretch wider than it's natural size */
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+.cat-info {
+    display: flex;
+    flex-direction: column;
+
+    /* creates space between title and text */
+    gap: 0.5rem;
+
+    /* creates space below cat info section */
+    padding: 0.5rem 0;
+}
+
+/* card title */
+.card h3 {
+    font-size: 1.2rem;
+}
+
+/* card description */
+.card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+
+    /* looks better with opaque black */
+    opacity: 0.85;
+}
+
+.card-button-holder {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 0.5rem;
+}
+
+.card-button {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* button hover scale transition */
+.card-button:hover {
+    transform: scale(1.05);
+}
+
+/* style for keyboard focus */
+.card-button:focus-visible {
+    outline: 4px dashed var(--primary);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   index.html main
+   ========================================================================== */
+
+/* takes the cards of gallery who has hero sibling */
+.hero~.gallery .cards {
+    /* makes grid 2 columns*/
+    grid-template-columns: repeat(2, 1fr);
+
+    /* sets max width of grid */
+    max-width: 700px;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* hero title */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--color);
+    opacity: 0.9;
+
+    /* sets max width of hero, 600 is ok */
+    max-width: 600px;
+}
+
+/* gallery title */
+.gallery h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing);
+}
+
+/* "Se mer" button holder */
+.see-more-button-holder {
+    text-align: center;
+    margin-top: var(--spacing);
+}
+
+.button {
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 0.8rem var(--spacing);
+
+    /* border */
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+
+    /* allows scaling to work for transition*/
+    display: inline-block;
+
+    /* color transition */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* style for keyboard focus */
+.button:focus-visible {
+    outline: 4px dashed var(--primary);
+    outline-offset: 2px;
+}
+
+/* "Se mer" button*/
+.see-more-button {
+    color: var(--color);
+    background-color: transparent;
+}
+
+/* scaling transition on hover */
+.see-more-button:hover {
+    color: white;
+    background-color: var(--primary);
+    transform: scale(1.03);
+}
+
+/* "Kontakt" button */
+.contact-button {
+    color: white;
+    background-color: var(--primary);
+}
+
+/* scaling transition on hover */
+.contact-button:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
    dark mode
    ========================================================================== */
 
@@ -206,11 +388,25 @@ nav a:focus-visible {
         --background: black;
         --color: white;
     }
+
+    /* card */
+    .card {
+        border-color: #666;
+    }
 }
 
 /* ==========================================================================
    responsive design
    ========================================================================== */
+
+@media (max-width: 650px) {
+
+    /* index cards */
+    .hero~.gallery .cards {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 450px;
+    }
+}
 
 @media (max-width: 600px) {
 
