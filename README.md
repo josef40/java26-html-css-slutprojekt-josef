@@ -1,6 +1,6 @@
 # 🐱 Kattmarknaden
 
-A fictional cat market website.
+A static frontend cat market website.
 
 ## 📐 Project Structure
 ```
