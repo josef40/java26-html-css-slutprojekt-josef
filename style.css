@@ -153,7 +153,7 @@ nav a:focus-visible {
     border-bottom: 1px solid #333333;
 }
 
-/* footer titles */
+/* footer header */
 .footer-section h4 {
     color: var(--primary);
     margin-bottom: 1rem;
@@ -240,7 +240,7 @@ nav a:focus-visible {
     padding: 0.5rem 0;
 }
 
-/* card title */
+/* card header */
 .card h3 {
     font-size: 1.2rem;
 }
@@ -303,7 +303,7 @@ nav a:focus-visible {
     gap: 1rem;
 }
 
-/* hero title */
+/* hero header */
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -318,7 +318,7 @@ nav a:focus-visible {
     max-width: 600px;
 }
 
-/* gallery title */
+/* gallery header */
 .gallery h2 {
     text-align: center;
     font-size: 2rem;
@@ -403,7 +403,7 @@ nav a:focus-visible {
     margin: var(--spacing) auto;
 }
 
-/* table section title */
+/* table section header */
 .table-section h2 {
     text-align: center;
     font-size: 1.4rem;
@@ -414,7 +414,7 @@ table {
     /* centers table */
     width: 100%;
 
-    /* remoevs gaps between columns and rows */
+    /* removes gaps between columns and rows */
     border-collapse: collapse;
 
     font-size: 1rem;
@@ -473,7 +473,7 @@ tr:hover {
     gap: 1rem;
 }
 
-/* title */
+/* header */
 .contact-header h1 {
     font-size: 2.2rem;
 }
