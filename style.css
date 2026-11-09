@@ -378,6 +378,76 @@ nav a:focus-visible {
 }
 
 /* ==========================================================================
+   annonser.html main
+   ========================================================================== */
+
+/* cards */
+.table-section~.gallery .cards {
+    /* makes grid 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* sets width of grid */
+    max-width: 1000px;
+}
+
+/* ==========================================================================
+   annonser.html table
+   ========================================================================== */
+
+/* table section */
+.table-section {
+    max-width: 700px;
+    margin: var(--spacing) auto;
+}
+
+/* table section title */
+.table-section h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    /* centers table */
+    width: 100%;
+
+    /* remoevs gaps between columns and rows */
+    border-collapse: collapse;
+
+    font-size: 1rem;
+}
+
+caption {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(235, 69, 69, 0.1);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.cats-and-prices-header {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ==========================================================================
    dark mode
    ========================================================================== */
 
@@ -393,16 +463,43 @@ nav a:focus-visible {
     .card {
         border-color: #666;
     }
+
+    /* table */
+    th,
+    td {
+        border-bottom-color: #666;
+        border-left-color: #666;
+        border-right-color: #666;
+    }
+
+    tr:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 /* ==========================================================================
    responsive design
    ========================================================================== */
 
+@media (max-width: 900px) {
+
+    /* annonser cards */
+    .table-section~.gallery .cards {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
 @media (max-width: 650px) {
 
     /* index cards */
     .hero~.gallery .cards {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 450px;
+    }
+
+    /* annonser cards */
+    .table-section~.gallery .cards {
         grid-template-columns: repeat(1, 1fr);
         max-width: 450px;
     }
