@@ -67,6 +67,12 @@ main {
     text-decoration: none;
 }
 
+/* keyboard navigation style */
+.logo:focus-visible {
+    outline: 4px dashed var(--accent);
+    outline-offset: 2px;
+}
+
 /* navigation links holder */
 nav ul {
     gap: var(--spacing);
