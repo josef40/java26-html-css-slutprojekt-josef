@@ -40,5 +40,8 @@ java26-html-css-slutprojekt-josef/
 * `cat7.jpg` by [FOX ^.ᆽ.^= ∫](https://www.pexels.com/photo/close-up-portrait-of-ginger-tabby-cat-39495643/)
 * `cat8.jpg` by [Daniil Kondrashin](https://www.pexels.com/photo/close-up-portrait-of-a-curious-domestic-cat-40726788/)
 
+## 💡 Inspiration Source
+* [blocket.se](blocket.se)
+
 ## 🚀 Getting Started
 Open **https://josef40.github.io/java26-html-css-slutprojekt-josef/index.html**
