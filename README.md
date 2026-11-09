@@ -2,6 +2,9 @@
 
 A static frontend cat market website.
 
+## 🎨 Sketch
+<img width="8160" height="3768" alt="sketch" src="https://github.com/user-attachments/assets/60637cc8-9b75-4e8f-8113-93cb3b261f7a" />
+
 ## 📐 Project Structure
 ```
 java26-html-css-slutprojekt-josef/
